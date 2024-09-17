@@ -1,0 +1,62 @@
+.about-skills {
+    width: 100%; /* Full width of the parent container */
+    max-width: 100%; /* Ensure it doesn’t exceed the parent width */
+    margin: 1rem 0; /* Vertical spacing between cards */
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.about-skills:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.about-img {
+    object-fit: cover;
+    width: 60px; /* Adjusted for better fit */
+    height: 60px; /* Adjusted for better fit */
+    margin-right: 1rem; /* Adjusted spacing */
+    border-radius: 50%; /* Circular image */
+}
+
+.about-skill-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+.about-skill-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.about-skil-description {
+    font-size: 1rem; /* Adjusted for better readability */
+    color: #666; /* Slightly lighter text color */
+}
+
+@media screen and (max-width: 720px) {
+    .about-skill-body {
+        font-size: 1.5vw; /* Adjust font size for medium screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about-skill-body {
+        font-size: 1.2vw; /* Further adjustment for very small screens */
+    }
+    
+    .about-img {
+        height: 50px; /* Adjusted image size for very small screens */
+        width: 50px; /* Adjusted image size for very small screens */
+    }
+}

@@ -1,0 +1,113 @@
+.project-card-container {
+    background-color: #f9f9f9;
+    border: 1px solid rgb(239, 230, 230);
+    width: 500px;
+    height: 500px;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* Align items to start */
+    border-radius: 10px;
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    color: #333;
+    position: relative;
+}
+
+.project-card-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-card-img {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    transition: height 0.3s ease;
+    /* Add smooth transition for height */
+}
+
+.project-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+    /* Reduce space between title and description */
+}
+
+.project-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.project-description {
+    font-size: 14px;
+    color: #666;
+    margin-top: 0.2rem;
+    /* Reduce space between title and description */
+    text-align: center;
+}
+
+.projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2rem auto;
+    width: 100%;
+    max-width: 1200px;
+}
+
+@media screen and (min-width: 1200px) {
+    .project-card-container {
+        width: 550px;
+        /* Increase the width for large screens */
+        height: 600px;
+        /* Increase the height for large screens */
+    }
+
+    .project-card-img {
+        height: 300px;
+        /* Give more space to the image on larger screens */
+    }
+
+    .project-title {
+        font-size: 22px;
+        /* Slightly larger title on larger screens */
+    }
+
+    .project-description {
+        font-size: 16px;
+        /* Slightly larger description text */
+    }
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .project-card-container {
+        width: 90%;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .project-card-img {
+        height: 200px;
+        /* Larger image on mobile for better visual balance */
+    }
+
+    .project-title {
+        font-size: 18px;
+    }
+
+    .project-description {
+        font-size: 14px;
+    }
+}

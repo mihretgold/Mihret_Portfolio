@@ -1,0 +1,63 @@
+.client-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+.client-card-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+.clients-list {
+    margin: 4rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 70%;
+}
+
+.client-card-container {
+    border: 1px solid rgb(239, 230, 230);
+    width: 300px;
+    /* Adjust width as needed */
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    /* Optional background color */
+    border-radius: 10px;
+    /* Optional rounded corners */
+    padding: 1rem;
+}
+
+.client-logo {
+    max-width: 100%;
+    max-height: 100px;
+    /* Adjust height as needed */
+    object-fit: contain;
+    /* Ensures the logo maintains its aspect ratio */
+    margin-bottom: 1rem;
+}
+
+.client-info {
+    text-align: center;
+}
+
+.client-title {
+    color:#333;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.client-role {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.client-description {
+    font-size: 14px;
+    color: #333;
+}

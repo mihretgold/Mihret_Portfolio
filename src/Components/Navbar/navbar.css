@@ -1,0 +1,118 @@
+.nav {
+    height: 5rem;
+    padding: 1rem 2rem;
+    width: 100vw;
+    max-width: 100rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    background-color: #1D1D1D;
+}
+
+.logo {
+    object-fit: cover;
+    height: 3rem;
+}
+
+/* Default Navbar Links */
+.nav-container {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    margin: 1rem;
+    font-size: large;
+    cursor: pointer;
+}
+
+.nav-links:hover {
+    color: #FFD700;
+    padding-bottom: 0.5rem;
+    border-bottom: #FFD700 solid 3px;
+}
+
+.chat-icon {
+    object-fit: cover;
+    height: 1rem;
+    width: 1rem;
+    margin-right: 0.5rem;
+}
+
+.nav-button {
+    background-color: white;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CSS Hamburger Icon */
+.hamburger {
+    display: none;
+    /* Hidden by default */
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 2rem;
+    width: 2rem;
+    z-index: 4;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+/* Animation to turn the hamburger into a "close" icon */
+.hamburger.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open .bar:nth-child(2) {
+    opacity: 0;
+    /* Hide the middle bar */
+}
+
+.hamburger.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Media Queries for responsive behavior */
+@media screen and (max-width: 768px) {
+    .nav-container {
+        display: none;
+    }
+
+    .nav-container.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 5rem;
+        left: 0;
+        right: 0;
+        background-color: #1D1D1D;
+        padding: 1rem;
+    }
+
+    .hamburger {
+        display: flex;
+        /* Show hamburger in mobile view */
+    }
+
+    .nav-button {
+        display: none;
+    }
+}
