@@ -7,7 +7,6 @@ import fire from "../../assets/fire_alarm.jpg";
 import recipie from "../../assets/recipie.jpg";
 import tele from "../../assets/tele.png";
 import course from "../../assets/course.jfif";
-import blog from "../../assets/blog.png";
 
 // Array of project details
 const projectDetails = [
@@ -39,12 +38,6 @@ const projectDetails = [
       "Built a Flutter app with Firebase authentication, CRUD functionality, bookmarking, and text-to-speech integration for accessibility.",
     link: "https://github.com/mihretgold/Recipe_Flutter_App",
   },
-  // {
-  //   imgSrc: blog,
-  //   title: "Blog App",
-  //   description:
-  //     "Collaborated with a team to develop a mobile app using Flutter and Dart, featuring BLoC state management and asynchronous operations.",
-  // },
   {
     imgSrc: course,
     title: "Course Management System",

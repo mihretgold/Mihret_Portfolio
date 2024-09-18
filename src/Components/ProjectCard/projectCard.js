@@ -6,10 +6,8 @@ const ProjectCard = ({ imgSrc, title, description, link }) => {
   };
   return (
     <div className="project-card-container" onClick={handleCardClick}>
-      <img src={imgSrc} alt="project picture" className="project-card-img" />
-      <a href="#" className="project-link">
-        <span className="project-title">{title}</span>
-      </a>
+      <img src={imgSrc} alt={`${title} picture`} className="project-card-img" />
+      <span className="project-title">{title}</span>
       <p className="project-description">{description}</p>
     </div>
   );
