@@ -6,14 +6,233 @@
     justify-content: center;
     flex-direction: column;
     margin: 0 auto;
-    width: 100vw;
-    max-width: 65rem;
+    width: 100%;
+    max-width: 1200px;
+    padding: 2rem;
     overflow: hidden;
 }
 
+.skills-section {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.skills-subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.skills-subtitle::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--accent-gradient);
+    border-radius: 2px;
+}
+
 .skill-bars {
-    margin: 1;
-    width: 100vw;
-    max-width: 80%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
     text-align: left;
+}
+
+/* Tech Stack Section */
+.tech-stack-section {
+    width: 100%;
+    margin-top: 4rem;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.tech-tag {
+    padding: 0.5rem 1rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    transition: all var(--transition-medium);
+    cursor: default;
+}
+
+.tech-tag:hover {
+    border-color: var(--accent-primary);
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--accent-primary);
+    transform: translateY(-2px);
+}
+
+.tech-tag[data-category="Languages"] {
+    border-color: rgba(239, 68, 68, 0.3);
+}
+
+.tech-tag[data-category="Languages"]:hover {
+    border-color: #ef4444;
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+}
+
+.tech-tag[data-category="Frontend"] {
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+.tech-tag[data-category="Frontend"]:hover {
+    border-color: #3b82f6;
+    background: rgba(59, 130, 246, 0.1);
+    color: #3b82f6;
+}
+
+.tech-tag[data-category="Mobile"] {
+    border-color: rgba(34, 211, 238, 0.3);
+}
+
+.tech-tag[data-category="Mobile"]:hover {
+    border-color: #22d3ee;
+    background: rgba(34, 211, 238, 0.1);
+    color: #22d3ee;
+}
+
+.tech-tag[data-category="Backend"] {
+    border-color: rgba(34, 197, 94, 0.3);
+}
+
+.tech-tag[data-category="Backend"]:hover {
+    border-color: #22c55e;
+    background: rgba(34, 197, 94, 0.1);
+    color: #22c55e;
+}
+
+.tech-tag[data-category="Database"] {
+    border-color: rgba(168, 85, 247, 0.3);
+}
+
+.tech-tag[data-category="Database"]:hover {
+    border-color: #a855f7;
+    background: rgba(168, 85, 247, 0.1);
+    color: #a855f7;
+}
+
+.tech-tag[data-category="DevOps"],
+.tech-tag[data-category="Cloud"] {
+    border-color: rgba(245, 158, 11, 0.3);
+}
+
+.tech-tag[data-category="DevOps"]:hover,
+.tech-tag[data-category="Cloud"]:hover {
+    border-color: #f59e0b;
+    background: rgba(245, 158, 11, 0.1);
+    color: #f59e0b;
+}
+
+/* Education Section */
+.education-section {
+    width: 100%;
+    margin-top: 4rem;
+}
+
+.education-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.education-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    text-align: left;
+    transition: all var(--transition-medium);
+}
+
+.education-card:hover {
+    border-color: var(--accent-primary);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.15);
+}
+
+.edu-icon {
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(99, 102, 241, 0.1);
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.edu-content {
+    flex: 1;
+}
+
+.edu-content h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.edu-place {
+    font-size: 0.9rem;
+    color: var(--accent-primary);
+    margin-bottom: 0.5rem;
+}
+
+.edu-details {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.edu-date {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .skill-bars {
+        grid-template-columns: 1fr;
+    }
+    
+    .education-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about-page {
+        padding: 1rem;
+    }
+    
+    .skills-subtitle {
+        font-size: 1.25rem;
+    }
+    
+    .tech-tag {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
 }

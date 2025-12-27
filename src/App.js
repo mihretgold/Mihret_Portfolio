@@ -4,26 +4,29 @@ import About from "./Components/About/about";
 import Projects from "./Components/Projects/projects";
 import Clients from "./Components/Clients/clients";
 import ContactMe from "./Components/ContactMe/contactMe";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <div id="home">
-        <LandingPage />
-      </div>
-      <div id="about">
-        <About />
-      </div>
-      <div id="clients">
-        <Clients />
-      </div>
-      <div id="portfolio">
-        <Projects />
-      </div>
-      <div id="contact">
-        <ContactMe />
-      </div>
+      <main className="main-content">
+        <section id="home">
+          <LandingPage />
+        </section>
+        <section id="about">
+          <About />
+        </section>
+        <section id="clients">
+          <Clients />
+        </section>
+        <section id="portfolio">
+          <Projects />
+        </section>
+        <section id="contact">
+          <ContactMe />
+        </section>
+      </main>
     </div>
   );
 }

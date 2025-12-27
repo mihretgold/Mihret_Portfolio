@@ -3,13 +3,12 @@ import './titleDesc.css'
 const TitleDesc = ({title, description}) => {
   return (
     <div className='title-container'>
-      <span className="about-title">{title}</span>
-      <br />
-      <br />
-      <span className="about-text">
+      <h2 className="section-title">
+        <span className="title-accent">{title}</span>
+      </h2>
+      <p className="section-description">
         {description}
-      </span>
-      <br />
+      </p>
     </div>
   );
 }

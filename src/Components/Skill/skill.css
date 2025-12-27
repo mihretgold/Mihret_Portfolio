@@ -1,62 +1,64 @@
 .about-skills {
-    width: 100%; /* Full width of the parent container */
-    max-width: 100%; /* Ensure it doesn’t exceed the parent width */
-    margin: 1rem 0; /* Vertical spacing between cards */
-    padding: 1rem 2rem;
+    width: 100%;
+    padding: 1.5rem;
     display: flex;
     align-items: flex-start;
-    justify-content: flex-start;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Optional shadow */
-    transition: transform 0.3s ease; /* Smooth hover effect */
+    gap: 1.25rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    transition: all var(--transition-medium);
 }
 
 .about-skills:hover {
-    transform: translateY(-5px); /* Slight lift effect on hover */
+    border-color: var(--accent-primary);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.15);
 }
 
 .about-img {
-    object-fit: cover;
-    width: 60px; /* Adjusted for better fit */
-    height: 60px; /* Adjusted for better fit */
-    margin-right: 1rem; /* Adjusted spacing */
-    border-radius: 50%; /* Circular image */
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    padding: 0.5rem;
+    background: rgba(99, 102, 241, 0.1);
+    border-radius: 12px;
+    flex-shrink: 0;
 }
 
 .about-skill-body {
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    font-size: 1rem;
-    font-weight: 200;
+    gap: 0.5rem;
 }
 
 .about-skill-title {
-    font-size: 1.5rem;
+    font-size: 1.15rem;
     font-weight: 600;
-    margin-bottom: 0.5rem;
-    color: #333;
+    color: var(--text-primary);
 }
 
 .about-skil-description {
-    font-size: 1rem; /* Adjusted for better readability */
-    color: #666; /* Slightly lighter text color */
-}
-
-@media screen and (max-width: 720px) {
-    .about-skill-body {
-        font-size: 1.5vw; /* Adjust font size for medium screens */
-    }
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
 }
 
 @media screen and (max-width: 480px) {
-    .about-skill-body {
-        font-size: 1.2vw; /* Further adjustment for very small screens */
+    .about-skills {
+        padding: 1.25rem;
     }
     
     .about-img {
-        height: 50px; /* Adjusted image size for very small screens */
-        width: 50px; /* Adjusted image size for very small screens */
+        width: 48px;
+        height: 48px;
+    }
+    
+    .about-skill-title {
+        font-size: 1rem;
+    }
+    
+    .about-skil-description {
+        font-size: 0.85rem;
     }
 }

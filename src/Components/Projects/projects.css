@@ -1,60 +1,94 @@
-/* General container and layout for projects, similar to clients */
 .projects-container {
-    margin: 4rem auto;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
     text-align: center;
-    width: 70%;
-    /* Match the width to the clients list */
 }
 
-.project-list {
+/* Tabs */
+.project-tabs {
     display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
     justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
 }
 
-/* Card styling similar to client cards */
-.project-card-container {
-    background-color: #2c2c2c;
-    color: white;
-    border-radius: 10px;
-    padding: 1.5rem;
-    width: 100%;
-    max-width: 300px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+.project-tab {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.75rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-medium);
+    font-family: 'Outfit', sans-serif;
 }
 
-.project-card-container:hover {
-    transform: scale(1.05);
+.project-tab:hover {
+    border-color: var(--accent-primary);
+    color: var(--text-primary);
 }
 
-.project-card-img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 1rem;
+.project-tab.active {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(139, 92, 246, 0.15) 100%);
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
 }
 
-.project-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
+.project-tab .tab-icon {
+    font-size: 1.2rem;
 }
 
-.project-link {
-    text-decoration: none;
-    color: #fff;
+.project-tab .tab-label {
+    white-space: nowrap;
 }
 
-.project-link:hover {
-    text-decoration: underline;
+/* Project Grid */
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
 }
 
-.project-description {
-    font-size: 1rem;
-    color: #ccc;
-    margin-top: 0.5rem;
-    text-align: left;
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .projects-container {
+        padding: 1rem;
+    }
+    
+    .project-tabs {
+        gap: 0.75rem;
+    }
+    
+    .project-tab {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.9rem;
+    }
+    
+    .project-list {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .project-tab .tab-label {
+        display: none;
+    }
+    
+    .project-tab .tab-icon {
+        font-size: 1.5rem;
+    }
+    
+    .project-tab {
+        padding: 0.75rem;
+    }
 }

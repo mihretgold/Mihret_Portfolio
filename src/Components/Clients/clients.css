@@ -1,5 +1,92 @@
-.clients-list {
-    margin: 4rem auto;
+.experience-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Tabs */
+.experience-tabs {
     display: flex;
-    width: 70%;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.experience-tab {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.5rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-medium);
+    font-family: 'Outfit', sans-serif;
+}
+
+.experience-tab:hover {
+    border-color: var(--accent-primary);
+    color: var(--text-primary);
+}
+
+.experience-tab.active {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(139, 92, 246, 0.15) 100%);
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
+}
+
+.tab-icon {
+    font-size: 1.2rem;
+}
+
+.tab-label {
+    white-space: nowrap;
+}
+
+/* Experience List */
+.experience-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .experience-container {
+        padding: 1rem;
+    }
+    
+    .experience-tabs {
+        gap: 0.5rem;
+    }
+    
+    .experience-tab {
+        padding: 0.75rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .tab-label {
+        display: none;
+    }
+    
+    .tab-icon {
+        font-size: 1.5rem;
+    }
+    
+    .experience-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .experience-tab {
+        padding: 0.75rem;
+    }
 }
