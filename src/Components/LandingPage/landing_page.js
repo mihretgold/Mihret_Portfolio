@@ -32,12 +32,7 @@ const LandingPage = () => {
           <div className="stats-row">
             <div className="stat-item">
               <span className="stat-number">1000+</span>
-              <span className="stat-label">Problems Solved</span>
-            </div>
-            <div className="stat-divider"></div>
-            <div className="stat-item">
-              <span className="stat-number">3.75</span>
-              <span className="stat-label">CGPA</span>
+              <span className="stat-label">DSA Problems</span>
             </div>
             <div className="stat-divider"></div>
             <div className="stat-item">
