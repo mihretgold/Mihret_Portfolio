@@ -40,6 +40,10 @@ const Entry = ({ org, role, date, place, points }) => (
   </article>
 );
 
+const Thumb = ({ src, fit, alt }) => (
+  <img className={`thumb${fit === "contain" ? " contain" : ""}`} src={src} alt={alt} loading="lazy" />
+);
+
 const navItems = [
   ["about", "About"], ["news", "News"], ["publications", "Publications"],
   ["projects", "Projects"], ["experience", "Experience"],
@@ -120,8 +124,9 @@ function App() {
           <ol className="pubs">
             {publications.map((p) => (
               <li key={p.title}>
-                <span className="venue">{p.venue}<br />{p.year}</span>
+                <Thumb src={p.img} fit={p.fit} alt="" />
                 <div>
+                  <span className="venue">{p.venue} {p.year}</span>
                   <p className="pub-title">{p.title}</p>
                   <p className="authors">
                     {p.authors.map((a, i) => (
@@ -139,15 +144,19 @@ function App() {
         </Section>
 
         <Section id="projects" title="Projects">
-          {projects.map((p) => (
-            <Entry
-              key={p.title}
-              org={p.title}
-              role={p.org}
-              date={p.date}
-              points={[p.point]}
-            />
-          ))}
+          <ul className="projects">
+            {projects.map((p) => (
+              <li key={p.title}>
+                <Thumb src={p.img} fit={p.fit} alt="" />
+                <div>
+                  <h3>{p.title}</h3>
+                  {p.org && <p className="role">{p.org}</p>}
+                  <p className="meta">{p.date}</p>
+                  <ul className="bullets"><li><Rich text={p.point} /></li></ul>
+                </div>
+              </li>
+            ))}
+          </ul>
         </Section>
 
         <Section id="experience" title="Industry Experience">
