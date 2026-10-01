@@ -1,3 +1,12 @@
+import signLanguage from "./assets/thumbs/sign-language.jpg";
+import videoEngagement from "./assets/thumbs/video-engagement.jpg";
+import steering from "./assets/thumbs/steering.jpg";
+import signToLearn from "./assets/thumbs/sign-to-learn.jpg";
+import manuscripts from "./assets/thumbs/manuscripts.jpg";
+import aastuMap from "./assets/thumbs/aastu-map.jpg";
+import cmuAfrica from "./assets/thumbs/cmu-africa.png";
+import psoGraph from "./assets/thumbs/pso-graph.png";
+
 export const profile = {
   name: "Mihret Agegnehu Bekele",
   tagline: "MS Engineering AI at Carnegie Mellon University Africa",
@@ -40,6 +49,7 @@ const ME = "Mihret Agegnehu Bekele";
 export const publications = [
   {
     venue: "NeurIPS WiML",
+    img: signLanguage,
     year: 2026,
     title: "Continuous Ethiopian Sign Language Recognition: Video and Skeleton-Based Models with Cross-Lingual Transfer",
     authors: ["Damaris Stephanie Ndjebayi", ME, "Anteneh Yehalem Tegegne", "Yohannes Ayana Ejigu", "Tamiru Alemnew"],
@@ -47,6 +57,7 @@ export const publications = [
   },
   {
     venue: "CVPR Demo",
+    img: videoEngagement,
     year: 2026,
     title: "Multimodal Video Understanding for Predicting and Optimizing Short-Form Content Engagement",
     authors: [ME],
@@ -54,6 +65,7 @@ export const publications = [
   },
   {
     venue: "CHI BiAlign",
+    img: steering, fit: "contain",
     year: 2026,
     title: "Steering Vision Models towards Subjective Concepts with Language",
     authors: [ME, "Dawit Getahun Mangistu", "Kidus Paulos Gebresadik", "Natnael Abayneh Unasho", "Amanuel Gizachew Abebe", "Simret A Gebreegziabher"],
@@ -64,29 +76,34 @@ export const publications = [
 export const projects = [
   {
     title: "OCR Benchmarking for Historical African Manuscripts",
+    img: cmuAfrica, fit: "contain",
     org: "Carnegie Mellon University Africa",
     date: "Sep 2026 – Present",
     point: "Benchmarking and developing OCR models on the **Fidel** dataset and designing an open OCR competition for low-resource Ethiopian scripts.",
   },
   {
     title: "Sign to Learn",
+    img: signToLearn,
     date: "Aug 2026 – Present",
     point: "Offline-first Flutter app that scores sign-language video responses in real time with MediaPipe keypoints and DTW.",
   },
   {
     title: "Restoring Ethiopic Manuscripts for Document Understanding",
+    img: manuscripts,
     org: "Supervised by Prof. Maarten de Rijke",
     date: "May 2026 – Present",
     point: "YOLO, OCR, and vision-language models to detect and restore damaged Ge'ez manuscript pages.",
   },
   {
     title: "AASTU Map",
+    img: aastuMap,
     org: "Addis Ababa Science and Technology University",
     date: "Jul 2024 – May 2025",
     point: "Led a team of 11 building a campus map app, with agile sprints and CI/CD.",
   },
   {
     title: "AI Assisted Resource Administering and Allocation",
+    img: psoGraph, fit: "contain",
     org: "Addis Ababa Science and Technology University",
     date: "Jan 2024 – Jun 2024",
     point: "Exam scheduling with Particle Swarm Optimization that improved room utilization by **40%**; supervised by Dr. Surafel Tilahun.",
