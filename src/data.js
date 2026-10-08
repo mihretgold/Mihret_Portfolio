@@ -3,7 +3,7 @@ import videoEngagement from "./assets/thumbs/video-engagement.jpg";
 import steering from "./assets/thumbs/steering.jpg";
 import signToLearn from "./assets/thumbs/sign-to-learn.jpg";
 import manuscripts from "./assets/thumbs/manuscripts.jpg";
-import aastuMap from "./assets/thumbs/aastu-map.jpg";
+import shortsMemory from "./assets/thumbs/shorts-memory.jpg";
 import cmuAfrica from "./assets/thumbs/cmu-africa.png";
 import psoGraph from "./assets/thumbs/pso-graph.png";
 
@@ -18,13 +18,14 @@ export const profile = {
     linkedin: "https://www.linkedin.com/in/mihret-bekele/",
   },
   bio:
-    "I am an MS student in Engineering Artificial Intelligence at Carnegie Mellon University Africa and a Mastercard Foundation Scholar. My research is in computer vision, particularly multimodal learning, vision-language models (VLMs), and video understanding. I care about building AI systems for low-resource languages and sign languages, and about making vision systems safer and fairer, in particular by identifying and mitigating racial and gender bias. Before CMU, I completed my BSc in Software Engineering at Addis Ababa Science and Technology University and worked as a software engineer at ChromaWay in Stockholm.",
+    "Mihret Agegnehu Bekele is a Master’s student in Engineering Artificial Intelligence at Carnegie Mellon University Africa (Mastercard Foundation Scholar) researching multimodal learning, Vision-Language Models (VLMs), and video understanding. Her research focuses on low-resource African writing systems and sign language accessibility, with papers accepted at top conferences including NeurIPS WiML, CVPR Demo, and ACM CHI BiAlign. She is currently seeking research-focused roles to build fair, robust, and accessible vision systems.",
 };
 
 // Newest first. Items from `visibleNews` onward are hidden until "Show all".
-export const visibleNews = 9;
+export const visibleNews = 10;
 
 export const news = [
+  { date: "Oct 2026", text: "Became a volunteer at the newly started **AI Safety Initiative at CMU-Africa (ASISCA)**, helping with its establishment." },
   { date: "Oct 2026", text: "Joined the **Robotics** reading group at the AI and Robotics Lab, CMU Africa." },
   { date: "Sep 2026", text: "Our paper on **continuous Ethiopian sign language recognition** was accepted to the **NeurIPS WiML** workshop." },
   { date: "Sep 2026", text: "Started as a **Research Assistant** at CMU Africa, working on OCR benchmarking for historical African manuscripts (Fidel dataset)." },
@@ -75,6 +76,12 @@ export const publications = [
 
 export const projects = [
   {
+    title: "Memory for Auto-Generating Shorts from Long Videos",
+    img: shortsMemory, fit: "contain",
+    date: "Sep 2026 – Present",
+    point: "Finds every engaging scene of one character in hours of video and cuts it into a short, using a **Multimodal Memory Graph** and **Narrative Memory Chains**.",
+  },
+  {
     title: "OCR Benchmarking for Historical African Manuscripts",
     img: cmuAfrica, fit: "contain",
     org: "Carnegie Mellon University Africa",
@@ -93,13 +100,6 @@ export const projects = [
     org: "Supervised by Prof. Maarten de Rijke",
     date: "May 2026 – Present",
     point: "YOLO, OCR, and vision-language models to detect and restore damaged Ge'ez manuscript pages.",
-  },
-  {
-    title: "AASTU Map",
-    img: aastuMap,
-    org: "Addis Ababa Science and Technology University",
-    date: "Jul 2024 – May 2025",
-    point: "Led a team of 11 building a campus map app, with agile sprints and CI/CD.",
   },
   {
     title: "AI Assisted Resource Administering and Allocation",
