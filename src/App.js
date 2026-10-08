@@ -40,9 +40,14 @@ const Entry = ({ org, role, date, place, points }) => (
   </article>
 );
 
-const Thumb = ({ src, fit, alt }) => (
-  <img className={`thumb${fit === "contain" ? " contain" : ""}`} src={src} alt={alt} loading="lazy" />
-);
+const Thumb = ({ src, fit, alt }) =>
+  src ? (
+    <img className={`thumb${fit === "contain" ? " contain" : ""}`} src={src} alt={alt} loading="lazy" />
+  ) : (
+    <div className="thumb placeholder" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18M3 15h18M8 5v4M16 5v4M8 15v4M16 15v4"/></svg>
+    </div>
+  );
 
 const navItems = [
   ["about", "About"], ["news", "News"], ["publications", "Publications"],
